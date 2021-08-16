@@ -1,0 +1,26 @@
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .app-container{
+    flex: 1;
+  }
+  .loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: rgb(117, 117, 117);
+    }
+  }
+}
+
+

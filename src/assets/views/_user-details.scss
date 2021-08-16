@@ -1,0 +1,236 @@
+.user-details {
+  position: relative;
+  .el-tabs__content {
+    .el-button {
+      margin: 10px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  li {
+    list-style-type: none;
+  }
+  .user-profile {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 0.25fr;
+    column-gap: 20px;
+    row-gap: 15px;
+    margin-left: 65px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .el-image {
+      grid-column-start: 0;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      justify-self: center;
+    }
+    p {
+      display: flex;
+      align-items: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      line-height: 1.6rem;
+    }
+    .el-button {
+      grid-column-start: 0;
+      grid-column-end: 1;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .email-and-edit-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      .el-button {
+        height: 100%;
+      }
+    }
+    img {
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+      border: 1px solid black;
+    }
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+      align-self: center;
+      text-transform: capitalize;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin: 0;
+    }
+  }
+  .el-tabs {
+    button {
+      border-radius: 10px;
+    }
+    .el-tabs__content {
+      .admission-requests {
+        width: 400px;
+        li {
+          list-style-type: none;
+          margin-bottom: 20px;
+          h4 {
+            display: inline-block;
+            margin-right: 10px;
+          }
+          span {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .user-projects {
+      button {
+        margin-top: 20px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.edit-user-form {
+  position: fixed;
+  box-shadow: 0 0 6px 0px black;
+  width: 400px;
+  padding: 20px;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  .el-button.close-edit{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    background-color: grey;
+    color: white;
+  }
+}
+
+button {
+  background-color: rgb(155, 155, 155);
+}
+.back-office-projs {
+  table {
+    // border: 1px solid black;
+    // border-spacing: 20px;
+    border-collapse: collapse;
+  }
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  th {
+    // border: 1px solid black;
+    padding: 3px 5px;
+    text-align: center;
+  }
+  td {
+    margin-right: 10px;
+    // border: 1px solid black;
+    padding: 3px 5px;
+    &:not(:first-child) {
+      text-align: center;
+    }
+  }
+}
+
+.user-summary {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .btn {
+    margin: 15px 0;
+    padding: 5px;
+    width: fit-content;
+  }
+  .main-user-profile {
+    display: flex;
+    .adventures {
+      align-self: center;
+      margin-left: 50px;
+    }
+  }
+  .dotted {
+    border: 0.5px dotted;
+    color: lightgrey;
+  }
+}
+
+.goToProj {
+  cursor: pointer;
+}
+
+.applicants-name{
+  cursor: pointer;
+  font-weight: 600;
+  &:hover {
+    border-bottom: 2px solid black;
+  }
+}
+
+.reservations {
+  border-bottom: 2px dotted lightgray;
+  .approved {
+    background-color: #67c23a;
+    color: white;
+    font-family: fira-sans;
+    padding: 5px;
+    // border: 1px solid black;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-size: larger;
+    margin-inline-end: 10px;
+    border-radius: 10px;
+  }
+}
+
+.pending {
+  border-bottom: 2px dotted lightgray;
+}
+
+span.pending {
+  border: 1px solid black;
+  background-color: rgb(192, 47, 47);
+  color: azure;
+  padding: 2px;
+  font-family: fira-sans;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.host span {
+  display: none;
+}
+
+.host {
+  &::after {
+    content: "Welcome Dear Host";
+  }
+}
+
+.myProjs {
+  font-weight: 500;
+}
+
+.name-and-pic {
+  img {
+    width: 128px;
+    height: 128px;
+  }
+}
